@@ -52,7 +52,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
     setLoading(true);
 
     if (!supabase) {
-      setError("Přihlášení není nakonfigurováno. Přidejte SUPABASE_URL a SUPABASE_ANON_KEY.");
+      setError("Přihlášení není nakonfigurováno. V Vercel → Settings → Environment Variables přidej PUBLIC_SUPABASE_URL a PUBLIC_SUPABASE_ANON_KEY, pak Redeploy.");
       setLoading(false);
       return;
     }
