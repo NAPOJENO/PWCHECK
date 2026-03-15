@@ -76,6 +76,11 @@ export async function uploadFiles(files: File[]): Promise<{
   });
 
   if (!res.ok) {
+    if (res.status === 404) {
+      throw new Error(
+        "API není dostupné (404). Pro nahrávání musíš nasadit Flask API (Railway/Render) a v Vercel nastavit PUBLIC_API_URL."
+      );
+    }
     const err = await res.json().catch(() => ({ error: res.statusText }));
     throw new Error(err.error || "Chyba při nahrávání");
   }
