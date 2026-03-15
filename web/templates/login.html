@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Přihlášení – PVCHECK Export{% endblock %}
+{% block content %}
+<div class="login-wrap">
+    <h1>PVCHECK Export</h1>
+    <p class="login-desc">Přihlaste se pro nahrání měřicích souborů a export dat.</p>
+    <form method="post" action="{{ url_for('login') }}" class="login-form">
+        <label for="username">Uživatelské jméno</label>
+        <input type="text" id="username" name="username" autocomplete="username" required autofocus>
+        <label for="password">Heslo</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <button type="submit">Přihlásit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "PVCHECK Export – Export měření FV na pár kliknutí",
+    "description": "Automatizujte export dat z měřicích přístrojů. Úspora času, legislativní jistota, rychlá návratnost investice."
+  },
+  "nav": {
+    "appName": "PVCHECK Export",
+    "login": "Přihlásit se",
+    "buy": "Koupit přístup"
+  },
+  "loginModal": {
+    "title": "Přihlášení",
+    "signupTitle": "Registrace",
+    "email": "E-mail",
+    "password": "Heslo",
+    "submit": "Přihlásit se",
+    "signupSubmit": "Zaregistrovat se",
+    "switchToSignup": "Nemáte účet? Zaregistrujte se",
+    "switchToLogin": "Už máte účet? Přihlaste se",
+    "google": "Pokračovat přes Google",
+    "noAccess": "Přístup vyžaduje zakoupení aplikace.",
+    "redirectToBuy": "Přesměrování na nákup…",
+    "error": "Chyba při přihlášení. Zkuste to znovu.",
+    "signupSuccess": "Účet vytvořen. Nejprve si zakoupíte přístup.",
+    "close": "Zavřít"
+  },
+  "hero": {
+    "title": "Export měření FV na pár kliknutí",
+    "subtitle": "Přestaňte trávit celé dny kopírováním dat do tabulek. Nahrajte .ZST soubory, vyberte sloupce a exportujte revizní protokoly pro distributory a pojišťovny.",
+    "ctaPrimary": "Zjistit více",
+    "ctaSecondary": "Koupit za 30 000 Kč",
+    "visualCaption": "Připraveno pro revizní protokol"
+  },
+  "problem": {
+    "title": "Problém, který znáte",
+    "description": "Měřicí přístroj za 100 000 Kč, ale software k exportu dat je katastrofa. Firma platí zaměstnance, který celý den jen kopíruje data do tabulek – až 10 000 Kč na každý projekt.",
+    "point1": "Přístroj za 100k, export za nic",
+    "point2": "Celý den ruční práce na jeden projekt",
+    "point3": "10 000 Kč jen za kopírování dat"
+  },
+  "solution": {
+    "title": "Řešení v pár kliknutích",
+    "description": "Nahrajte soubory .ZST z měřicích přístrojů, vyberte sloupce k exportu a stáhněte CSV připravené pro revizní protokoly.",
+    "step1": "Nahrání .ZST souborů",
+    "step2": "Výběr sloupců k exportu",
+    "step3": "Export CSV pro protokoly"
+  },
+  "benefits": {
+    "title": "Proč PVCHECK Export",
+    "speed": {
+      "title": "Rychlost",
+      "desc": "Minuty místo celého dne. Automatizace místo ruční práce."
+    },
+    "compliance": {
+      "title": "Legislativní jistota",
+      "desc": "Neprůstřelné protokoly pro distributory sítě a pojišťovny."
+    },
+    "roi": {
+      "title": "Rychlá návratnost",
+      "desc": "Jednorázová investice 30 000 Kč se vrátí na prvních pár projektech."
+    },
+    "quality": {
+      "title": "Špičková kvalita",
+      "desc": "Nástroj pro profesionály, kteří nehledají kompromisy."
+    }
+  },
+  "cta": {
+    "title": "Přestaňte plýtvat časem",
+    "subtitle": "Jednorázový přístup za 30 000 Kč. Žádné měsíční poplatky.",
+    "button": "Koupit přístup za 30 000 Kč"
+  },
+  "faq": {
+    "title": "Časté dotazy",
+    "q1": "Co přesně dostanu za 30 000 Kč?",
+    "a1": "Jednorázový přístup k aplikaci PVCHECK Export. Můžete nahrávat .ZST soubory, vybírat sloupce a exportovat CSV bez omezení. Žádné měsíční poplatky.",
+    "q2": "S jakými přístroji aplikace funguje?",
+    "a2": "Aplikace zpracovává soubory .ZST z měřicích přístrojů používaných pro FV revize. Konkrétní kompatibilitu ověřte u výrobce přístroje.",
+    "q3": "Potřebuji technické znalosti?",
+    "a3": "Ne. Stačí nahrát soubory, zaškrtnout sloupce a kliknout na Export. Rozhraní je intuitivní.",
+    "q4": "Je možné platbu rozložit?",
+    "a4": "Aktuálně nabízíme jednorázovou platbu. Pro firemní zákazníky můžeme individuálně řešit fakturaci.",
+    "q5": "Jaká je podpora?",
+    "a5": "Po zakoupení získáte přístup k dokumentaci a e-mailovou podporu."
+  },
+  "footer": {
+    "copyright": "© 2025 PVCHECK Export. Všechna práva vyhrazena."
+  }
+}

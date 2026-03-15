@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "PVCHECK Export – FV Measurement Export in a Few Clicks",
+    "description": "Automate data export from measuring devices. Save time, ensure compliance, fast ROI."
+  },
+  "nav": {
+    "appName": "PVCHECK Export",
+    "login": "Log in",
+    "buy": "Buy access"
+  },
+  "loginModal": {
+    "title": "Log in",
+    "signupTitle": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log in",
+    "signupSubmit": "Create account",
+    "switchToSignup": "Don't have an account? Sign up",
+    "switchToLogin": "Already have an account? Log in",
+    "google": "Continue with Google",
+    "noAccess": "Access requires purchasing the app.",
+    "redirectToBuy": "Redirecting to purchase…",
+    "error": "Login failed. Please try again.",
+    "signupSuccess": "Account created. Please purchase access first.",
+    "close": "Close"
+  },
+  "hero": {
+    "title": "FV Measurement Export in a Few Clicks",
+    "subtitle": "Stop spending entire days copying data into spreadsheets. Upload .ZST files, select columns, and export inspection reports for grid operators and insurers.",
+    "ctaPrimary": "Learn more",
+    "ctaSecondary": "Buy for €1,200",
+    "visualCaption": "Ready for inspection report"
+  },
+  "problem": {
+    "title": "The Problem You Know",
+    "description": "A measuring device for €4,000, but the export software is a disaster. Companies pay employees who spend entire days just copying data into tables – up to €400 per project.",
+    "point1": "Device for €4k, export for nothing",
+    "point2": "A full day of manual work per project",
+    "point3": "€400 just for copying data"
+  },
+  "solution": {
+    "title": "Solution in a Few Clicks",
+    "description": "Upload .ZST files from measuring devices, select columns to export, and download CSV ready for inspection reports.",
+    "step1": "Upload .ZST files",
+    "step2": "Select columns to export",
+    "step3": "Export CSV for reports"
+  },
+  "benefits": {
+    "title": "Why PVCHECK Export",
+    "speed": {
+      "title": "Speed",
+      "desc": "Minutes instead of a full day. Automation instead of manual work."
+    },
+    "compliance": {
+      "title": "Regulatory Compliance",
+      "desc": "Bulletproof reports for grid operators and insurers."
+    },
+    "roi": {
+      "title": "Fast ROI",
+      "desc": "One-time investment of €1,200 pays back in the first few projects."
+    },
+    "quality": {
+      "title": "Top Quality",
+      "desc": "A tool for professionals who don't compromise."
+    }
+  },
+  "cta": {
+    "title": "Stop Wasting Time",
+    "subtitle": "One-time access for €1,200. No monthly fees.",
+    "button": "Buy access for €1,200"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "What exactly do I get for €1,200?",
+    "a1": "One-time access to the PVCHECK Export application. You can upload .ZST files, select columns, and export CSV without limits. No monthly fees.",
+    "q2": "Which devices does the app work with?",
+    "a2": "The app processes .ZST files from measuring devices used for PV inspections. Verify specific compatibility with your device manufacturer.",
+    "q3": "Do I need technical knowledge?",
+    "a3": "No. Just upload files, check the columns, and click Export. The interface is intuitive.",
+    "q4": "Can the payment be split?",
+    "a4": "We currently offer one-time payment. For corporate customers, we can arrange invoicing individually.",
+    "q5": "What support is included?",
+    "a5": "After purchase, you get access to documentation and email support."
+  },
+  "footer": {
+    "copyright": "© 2025 PVCHECK Export. All rights reserved."
+  }
+}

@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import CTA from "../components/CTA";
+import FAQ from "../components/FAQ";
+---
+<Layout title="PVCHECK Export – Export měření FV na pár kliknutí" description="Automatizujte export dat z měřicích přístrojů. Úspora času, legislativní jistota, rychlá návratnost investice.">
+  <Hero client:load />
+  <Features client:visible />
+  <CTA client:visible />
+  <FAQ client:visible />
+</Layout>

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Nahrát soubory – PVCHECK Export{% endblock %}
+{% block content %}
+<div class="app-wrap">
+    <header class="app-header">
+        <h1>PVCHECK Export</h1>
+        <a href="{{ url_for('logout') }}" class="btn btn-outline">Odhlásit</a>
+    </header>
+
+    <section class="upload-section">
+        <h2>Nahrát soubory</h2>
+        <p class="hint">Vyberte jeden nebo více souborů .ZST (výstupy z měřicích přístrojů). Po potvrzení se načtou data a můžete vybrat sloupce k exportu.</p>
+        <form method="post" action="{{ url_for('index') }}" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="files" id="files" accept=".zst,.ZST" multiple required>
+            <button type="submit" name="action" value="upload">Načíst data</button>
+        </form>
+    </section>
+
+    {% if has_data and columns_by_group %}
+    <section class="columns-section">
+        <h2>Výběr sloupců k exportu</h2>
+        <p class="hint">Zaškrtněte sloupce, které chcete zahrnout do exportovaného CSV. Zobrazeno {{ row_count }} měření.</p>
+        <div class="column-actions">
+            <button type="button" class="btn btn-small" id="selectAll">Vybrat vše</button>
+            <button type="button" class="btn btn-small" id="deselectAll">Zrušit vše</button>
+        </div>
+        <form method="post" action="{{ url_for('export_csv') }}" id="exportForm" class="columns-form">
+            {% for group_name, columns in columns_by_group.items() %}
+            <div class="column-group" data-group="{{ group_name }}">
+                <h3 class="group-title">
+                    <label class="group-checkbox">
+                        <input type="checkbox" class="group-toggle" data-group="{{ group_name }}">
+                        {{ group_name }}
+                    </label>
+                </h3>
+                <ul class="column-list">
+                    {% for col_name, col_desc in columns %}
+                    <li>
+                        <label class="column-item">
+                            <input type="checkbox" name="columns" value="{{ col_name }}" class="col-cb"
+                                   {% if default_columns and col_name in default_columns %}checked{% endif %}>
+                            <span class="col-name" title="{{ col_desc }}">{{ col_name }}</span>
+                            <span class="col-desc">{{ col_desc }}</span>
+                        </label>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+            <div class="export-submit">
+                <button type="submit" class="btn btn-primary">Export CSV</button>
+            </div>
+        </form>
+    </section>
+    {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}
+{% if has_data and columns_by_group %}
+<script>
+(function() {
+    var groupToggles = document.querySelectorAll('.group-toggle');
+    var colCbs = document.querySelectorAll('.col-cb');
+    function updateGroupCheckbox(groupName) {
+        var group = document.querySelector('.column-group[data-group="' + groupName + '"]');
+        var cbs = group.querySelectorAll('.col-cb');
+        var checked = Array.prototype.every.call(cbs, function(c) { return c.checked; });
+        var any = Array.prototype.some.call(cbs, function(c) { return c.checked; });
+        var toggle = group.querySelector('.group-toggle');
+        toggle.checked = checked;
+        toggle.indeterminate = any && !checked;
+    }
+    groupToggles.forEach(function(toggle) {
+        toggle.addEventListener('change', function() {
+            var group = this.getAttribute('data-group');
+            var groupEl = document.querySelector('.column-group[data-group="' + group + '"]');
+            var cbs = groupEl.querySelectorAll('.col-cb');
+            cbs.forEach(function(c) { c.checked = toggle.checked; });
+        });
+    });
+    colCbs.forEach(function(cb) {
+        cb.addEventListener('change', function() {
+            var group = this.closest('.column-group').getAttribute('data-group');
+            updateGroupCheckbox(group);
+        });
+    });
+    document.getElementById('selectAll').addEventListener('click', function() {
+        colCbs.forEach(function(c) { c.checked = true; });
+        groupToggles.forEach(function(t) { t.checked = true; t.indeterminate = false; });
+    });
+    document.getElementById('deselectAll').addEventListener('click', function() {
+        colCbs.forEach(function(c) { c.checked = false; });
+        groupToggles.forEach(function(t) { t.checked = false; t.indeterminate = false; });
+    });
+})();
+</script>
+{% endif %}
+{% endblock %}

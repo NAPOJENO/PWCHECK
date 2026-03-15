@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 1rem; background: #f5f5f5; color: #222; }
+.flashes { list-style: none; margin: 0 0 1rem; padding: 0; }
+.flash { padding: 0.6rem 1rem; border-radius: 6px; margin-bottom: 0.5rem; }
+.flash.error { background: #fee; color: #c00; }
+.flash.success { background: #efe; color: #060; }
+
+.login-wrap { max-width: 360px; margin: 3rem auto; padding: 2rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.login-wrap h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+.login-desc { color: #666; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.login-form label { display: block; margin-top: 1rem; font-weight: 500; }
+.login-form input { width: 100%; padding: 0.6rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+.login-form button { width: 100%; margin-top: 1.5rem; padding: 0.75rem; background: #2563eb; color: #fff; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+.login-form button:hover { background: #1d4ed8; }
+
+.app-wrap { max-width: 900px; margin: 0 auto; }
+.app-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+.app-header h1 { margin: 0; font-size: 1.5rem; }
+.btn { padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; cursor: pointer; text-decoration: none; display: inline-block; border: 1px solid transparent; }
+.btn-outline { background: #fff; color: #555; border-color: #ccc; }
+.btn-outline:hover { background: #f0f0f0; }
+.btn-small { padding: 0.35rem 0.75rem; font-size: 0.85rem; margin-right: 0.5rem; margin-bottom: 0.5rem; background: #e5e7eb; border: 1px solid #d1d5db; }
+.btn-small:hover { background: #d1d5db; }
+.btn-primary { background: #2563eb; color: #fff; border: none; padding: 0.6rem 1.25rem; font-size: 1rem; }
+.btn-primary:hover { background: #1d4ed8; }
+
+.upload-section, .columns-section { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+.upload-section h2, .columns-section h2 { margin: 0 0 0.5rem; font-size: 1.2rem; }
+.hint { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+.upload-form { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.upload-form input[type="file"] { max-width: 100%; }
+.upload-form button { padding: 0.5rem 1rem; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.upload-form button:hover { background: #1d4ed8; }
+
+.column-actions { margin-bottom: 1rem; }
+.columns-form { margin-top: 0.5rem; }
+.column-group { margin-bottom: 1.25rem; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+.group-title { margin: 0; padding: 0.65rem 1rem; background: #f8fafc; font-size: 1rem; font-weight: 600; }
+.group-checkbox { display: flex; align-items: center; cursor: pointer; }
+.group-checkbox input { margin-right: 0.5rem; }
+.column-list { list-style: none; margin: 0; padding: 0.5rem 1rem 1rem; }
+.column-list li { margin: 0.25rem 0; }
+.column-item { display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; padding: 0.25rem 0; }
+.column-item input { margin-top: 0.2rem; flex-shrink: 0; }
+.col-name { font-weight: 500; min-width: 180px; flex-shrink: 0; }
+.col-desc { color: #666; font-size: 0.9rem; }
+.export-submit { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; }
+.export-submit .btn-primary { cursor: pointer; }
