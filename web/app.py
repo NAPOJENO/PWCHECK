@@ -22,9 +22,10 @@ load_dotenv(Path(__file__).parent / ".env")
 
 app = Flask(__name__)
 
-# CORS pro Astro frontend (proxy v dev)
+# CORS – v produkci přidej ALLOWED_ORIGINS (čárkou oddělené)
 from flask_cors import CORS
-CORS(app, supports_credentials=True, origins=["http://localhost:4321", "http://127.0.0.1:4321"])
+_cors_origins = os.environ.get("ALLOWED_ORIGINS", "http://localhost:4321,http://127.0.0.1:4321").split(",")
+CORS(app, supports_credentials=True, origins=[o.strip() for o in _cors_origins if o.strip()])
 app.secret_key = os.environ.get("SECRET_KEY", "pvcheck-dev-secret-change-in-production")
 app.config["MAX_CONTENT_LENGTH"] = 100 * 1024 * 1024  # 100 MB
 app.config["UPLOAD_FOLDER"] = Path(__file__).parent / "uploads"
